@@ -83,6 +83,13 @@ const partners = [
   { name: "AUTOFAST", Icon: Settings },
 ];
 
+const quickServices = [
+  { Icon: Car, title: "Car Customization", copy: "Performance Upgrades" },
+  { Icon: Gauge, title: "Engine Tuning", copy: "More Power" },
+  { Icon: Disc, title: "Brake Service", copy: "Safer Stopping" },
+  { Icon: Wrench, title: "Auto Repair", copy: "Reliable Finishes" },
+];
+
 const news = [
   {
     src: galleryEngine,
@@ -96,7 +103,39 @@ const news = [
     title: "Brake Maintenance: What You Need to Know",
     copy: "Pad wear, fluid cycles and the warning signs that mean you should stop driving now.",
   },
+  {
+    src: galleryExhaust,
+    alt: "Red sports car rear with twin exhaust tips",
+    title: "10 Brands of Quality Car Paint",
+    copy: "How we pick clearcoats and basecoats that survive years of sun, salt and washing.",
+  },
 ];
+
+function QuickServices() {
+  return (
+    <section className="section-y">
+      <div className="container-page">
+        <SectionHeading eyebrow="What We Offer" title="Our Services" />
+        <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4">
+          {quickServices.map(({ Icon, title, copy }, i) => (
+            <Reveal key={title} delay={i * 0.07}>
+              <div className="group flex flex-col items-center text-center">
+                <span className="icon-badge group-hover:bg-primary/25">
+                  <Icon className="size-7" strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <h3 className="mt-4 font-display text-base font-extrabold">{title}</h3>
+                <p className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">
+                  {copy}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Hero() {
   return (
