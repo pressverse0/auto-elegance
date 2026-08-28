@@ -58,7 +58,7 @@ function About() {
             />
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">How we work</h2>
+            <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15]">How we work</h2>
             <p className="mt-5 leading-relaxed text-muted-foreground">
               Every car begins with a documented inspection and a fixed quote. Nothing gets touched
               until you approve the scope, and nothing leaves without a road test.
@@ -82,7 +82,7 @@ function About() {
 
       <section className="section-y bg-card/40">
         <div className="container-page">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Team Expert</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15]">Team Expert</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((m, i) => (
               <Reveal key={m.name} delay={i * 0.1}>

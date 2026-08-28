@@ -45,7 +45,7 @@ function Services() {
             <Reveal key={title} delay={i * 0.06}>
               <article className="card-surface card-surface-hover h-full p-8">
                 <Icon className="size-9 text-primary" strokeWidth={1.75} aria-hidden="true" />
-                <h2 className="mt-6 text-xl font-bold">{title}</h2>
+                <h2 className="mt-6 font-display text-xl font-bold">{title}</h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{copy}</p>
               </article>
             </Reveal>
