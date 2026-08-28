@@ -19,7 +19,7 @@ export function Newsletter() {
     e.preventDefault();
     const result = emailSchema.safeParse(email);
     if (!result.success) {
-      toast.error(result.error.issues[0].message);
+      toast.error(result.error.issues[0]?.message ?? "Invalid input");
       return;
     }
     toast.success("You're subscribed — watch your inbox for build updates.");
