@@ -108,7 +108,7 @@ function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="label-eyebrow">Performance Workshop</p>
-          <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="mt-4 font-display text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             Building Your
             <br />
             Dream Car
@@ -147,7 +147,16 @@ function Hero() {
         </motion.div>
       </div>
 
-      <div className="border-y border-border bg-background/70 backdrop-blur">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1440 90"
+        preserveAspectRatio="none"
+        className="relative block h-12 w-full md:h-[5.5rem]"
+      >
+        <path d="M0 90 C 360 10 1080 10 1440 90 L1440 90 L0 90 Z" fill="var(--background)" />
+      </svg>
+
+      <div className="border-b border-border bg-background">
         <div className="container-page grid gap-8 py-10 md:grid-cols-3 md:divide-x md:divide-border">
           {features.map((f, i) => (
             <Reveal key={f.n} delay={i * 0.08} className="md:px-8 md:first:pl-0">
@@ -188,7 +197,7 @@ function About() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="label-eyebrow">About Us</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15]">
             A workshop built by drivers, for drivers
           </h2>
           <p className="mt-5 leading-relaxed text-muted-foreground">
@@ -223,7 +232,7 @@ function Services() {
             <Reveal key={title} delay={i * 0.1}>
               <article className="card-surface card-surface-hover group h-full p-8">
                 <Icon className="size-9 text-primary" strokeWidth={1.75} aria-hidden="true" />
-                <h3 className="mt-6 text-xl font-bold">{title}</h3>
+                <h3 className="mt-6 font-display text-xl font-bold">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{copy}</p>
                 <Link
                   to="/services"
@@ -247,7 +256,7 @@ function GoodCars() {
       <div className="container-page grid gap-8 lg:grid-cols-2 lg:items-stretch">
         <Reveal className="card-surface flex flex-col justify-center p-10">
           <p className="label-eyebrow">Featured Work</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">Good Cars</h2>
+          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15]">Good Cars</h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
             Corner-balanced setups, forged wheel fitments and geometry dialled in on our alignment
             rig — the details that separate a fast car from a finished one.
@@ -268,7 +277,7 @@ function GoodCars() {
             className="h-full w-full rounded-2xl border border-border object-cover"
           />
           <div className="rounded-2xl gradient-red p-8 shadow-glow">
-            <h3 className="text-xl font-bold text-primary-foreground">Top Modification</h3>
+            <h3 className="font-display text-xl font-bold text-primary-foreground">Top Modification</h3>
             <p className="mt-2 text-sm leading-relaxed text-primary-foreground/85">
               Stage-two package: intake, exhaust, ECU calibration and brake upgrade in one visit.
             </p>
@@ -331,7 +340,7 @@ function Team() {
       <div className="container-page grid items-center gap-12 lg:grid-cols-2">
         <Reveal>
           <p className="label-eyebrow">Team Expert</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15]">
             The hands under your hood
           </h2>
           <p className="mt-5 leading-relaxed text-muted-foreground">
@@ -392,7 +401,7 @@ function News() {
                   className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="p-7">
-                  <h3 className="text-xl font-bold">{n.title}</h3>
+                  <h3 className="font-display text-xl font-bold">{n.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{n.copy}</p>
                   <Link
                     to="/blog"

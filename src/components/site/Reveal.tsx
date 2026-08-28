@@ -37,10 +37,16 @@ export function SectionHeading({
   return (
     <Reveal className={align === "center" ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
       {eyebrow ? <p className="label-eyebrow">{eyebrow}</p> : null}
-      <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">{title}</h2>
+      <h2
+        data-align={align}
+        className="heading-rule mt-3 font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15]"
+      >
+        {title}
+      </h2>
       {description ? (
         <p className="mt-4 text-base leading-relaxed text-muted-foreground">{description}</p>
       ) : null}
     </Reveal>
+
   );
 }

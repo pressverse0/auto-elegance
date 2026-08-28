@@ -6,7 +6,7 @@ export function PageHero({ eyebrow, title, description }: { eyebrow: string; tit
       <div className="container-page">
         <Reveal>
           <p className="label-eyebrow">{eyebrow}</p>
-          <h1 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">{title}</h1>
+          <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight md:text-6xl">{title}</h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {description}
           </p>

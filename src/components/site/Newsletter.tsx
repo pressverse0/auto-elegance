@@ -27,15 +27,14 @@ export function Newsletter() {
   };
 
   return (
-    <section className="relative overflow-hidden border-y border-border bg-card">
-      <div className="gradient-red pointer-events-none absolute -right-32 top-0 h-full w-2/3 opacity-20 blur-3xl" />
-      <div className="container-page relative grid gap-8 py-16 md:grid-cols-2 md:items-center md:py-20">
+    <section className="band-red relative overflow-hidden">
+      <div className="container-page relative grid gap-8 py-24 md:grid-cols-2 md:items-center md:py-28">
         <Reveal>
-          <p className="label-eyebrow">Our Newsletter</p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary-foreground/80">Our Newsletter</p>
+          <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight md:text-[2.6rem] md:leading-[1.15] text-primary-foreground">
             Subscribe for Updates
           </h2>
-          <p className="mt-4 max-w-md text-muted-foreground">
+          <p className="mt-4 max-w-md text-primary-foreground/85">
             Get the latest builds, maintenance tips and special workshop offers straight to your
             inbox.
           </p>
@@ -52,9 +51,9 @@ export function Newsletter() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               maxLength={255}
-              className="h-12 bg-background"
+              className="h-12 border-transparent bg-background/95 text-foreground"
             />
-            <Button type="submit" size="lg" className="h-12 shrink-0">
+            <Button type="submit" size="lg" variant="secondary" className="h-12 shrink-0">
               Subscribe
             </Button>
           </form>
