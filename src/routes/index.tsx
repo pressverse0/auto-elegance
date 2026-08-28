@@ -108,7 +108,7 @@ function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="label-eyebrow">Performance Workshop</p>
-          <h1 className="mt-4 text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="mt-4 font-display text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             Building Your
             <br />
             Dream Car
@@ -147,7 +147,16 @@ function Hero() {
         </motion.div>
       </div>
 
-      <div className="border-y border-border bg-background/70 backdrop-blur">
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1440 90"
+        preserveAspectRatio="none"
+        className="relative block h-12 w-full md:h-[5.5rem]"
+      >
+        <path d="M0 90 C 360 10 1080 10 1440 90 L1440 90 L0 90 Z" fill="var(--background)" />
+      </svg>
+
+      <div className="border-b border-border bg-background">
         <div className="container-page grid gap-8 py-10 md:grid-cols-3 md:divide-x md:divide-border">
           {features.map((f, i) => (
             <Reveal key={f.n} delay={i * 0.08} className="md:px-8 md:first:pl-0">
