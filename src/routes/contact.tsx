@@ -50,7 +50,7 @@ function Contact() {
     e.preventDefault();
     const result = schema.safeParse(form);
     if (!result.success) {
-      toast.error(result.error.issues[0].message);
+      toast.error(result.error.issues[0]?.message ?? "Invalid input");
       return;
     }
     toast.success("Thanks — our service desk will reply within one working day.");
